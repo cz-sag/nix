@@ -3,16 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
-    diskio = {
+    disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager.url = "github:nix-community/home-manager/release-23.11";
   };
 
-  outputs = { self, nixpkgs, diskio, home-manager}: 
+  outputs = { self, nixpkgs, disko, home-manager}@inputs: 
   let
-    shared = [ shared/config.nix diskio.nixosModules.diskio ];
+    shared = [ shared/config.nix disko.nixosModules.disko ];
   in {
     nixosConfigurations.goofy_liskov = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
