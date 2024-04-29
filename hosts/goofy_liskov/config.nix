@@ -2,14 +2,13 @@
 
 {
   imports = [
-    ./user.nix
-    ./disko-config.nix
+    disko-config.nix
     ./hardware-configuration.nix
   ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "goofy_liskov";
   

@@ -12,7 +12,7 @@
 
   outputs = { self, nixpkgs, disko, home-manager}@inputs: 
   let
-    shared = [ shared/config.nix disko.nixosModules.disko ];
+    shared = [ shared/config.nix users/user.nix disko.nixosModules.disko ];
   in {
     nixosConfigurations.goofy_liskov = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";

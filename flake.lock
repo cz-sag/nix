@@ -1,6 +1,6 @@
 {
   "nodes": {
-    "diskio": {
+    "disko": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
@@ -73,7 +73,7 @@
     },
     "root": {
       "inputs": {
-        "diskio": "diskio",
+        "disko": "disko",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2"
       }
