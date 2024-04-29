@@ -16,6 +16,9 @@ sudo nixos-install -v --show-trace --no-root-passwd --root /mnt --flake /tmp/nix
 ## Initialize
 ```bash
 nix flake init --extra-experimental-features 'nix-command flakes'
+curl https://raw.githubusercontent.com/nix-community/disko/master/example/hybrid.nix -o /tmp/disk-config.nix
+sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko /tmp/disk-config.nix
+nixos-generate-config --no-filesystems --root /mnt
 ```
 
 namegen: https://codepen.io/mikedryan/details/vLrgqr
