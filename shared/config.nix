@@ -38,6 +38,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.excludePackages = [ pkgs.xterm ];
 
   # Configure keymap in X11
   services.xserver = {
@@ -76,7 +77,6 @@
   environment.systemPackages = with pkgs; [
     git
     vim
-    firefox
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -14,6 +14,7 @@
   let
     shared = [ 
       shared/config.nix
+      shared/firefox.nix
       shared/gnome.nix
       users/user.nix
       home-manager.nixosModules.home-manager
