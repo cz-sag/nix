@@ -76,6 +76,7 @@
   environment.systemPackages = with pkgs; [
     git
     vim
+    firefox
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
