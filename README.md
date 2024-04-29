@@ -2,7 +2,8 @@
 
 ## Install
 ```bash
-
+cd /tmp
+git clone https://github.com/cz-sag/nix.git
 ```
 
 ## Initialize
