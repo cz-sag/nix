@@ -16,6 +16,9 @@
                 mountpoint = "/boot";
                 mountOptions = [
                   "defaults"
+                  "fmask=0077"
+                  "dmask=0077"
+                  "umask=0077"
                 ];
               };
             };
