@@ -6,8 +6,11 @@
     environment.gnome.excludePackages = (with pkgs; [
       gnome-photos
       gnome-tour
+      gnome-connections
       # gnome-text-editor
+      evince # document reader
       loupe
+      snapshot # photo viewer
     ]) ++ (with pkgs.gnome; [
       cheese # webcam tool
       gedit # text editor
