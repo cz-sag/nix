@@ -16,6 +16,7 @@
       shared/config.nix
       shared/gnome.nix
       users/user.nix
+      home-manager.nixosModules.home-manager
       disko.nixosModules.disko
     ];
   in {
