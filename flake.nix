@@ -20,7 +20,7 @@
       disko.nixosModules.disko
     ];
   in {
-    nixosConfigurations.goofy_liskov = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.goofy-liskov = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = shared ++ [ hosts/goofy_liskov/config.nix ];
     };

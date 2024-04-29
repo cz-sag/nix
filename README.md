@@ -1,5 +1,11 @@
 # Nix systems repo
 
+## Switch from running NixOS
+
+```bash
+sudo nixos-rebuild switch --flake .
+```
+
 ## Install
 ```bash
 cd /tmp
