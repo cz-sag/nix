@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   services.udev.extraRules = ''
     #
     # Copyright 2011,2015 Ettus Research LLC

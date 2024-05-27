@@ -1,6 +1,10 @@
-{ config, pkgs, lib,... }:
 {
-  nix.settings = { experimental-features = "nix-command flakes"; };
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
+  nix.settings = {experimental-features = "nix-command flakes";};
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -32,7 +36,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.xserver.excludePackages = [ pkgs.xterm ];
+  services.xserver.excludePackages = [pkgs.xterm];
 
   # Configure keymap in X11
   services.xserver = {
@@ -53,7 +57,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -67,6 +71,7 @@
     pciutils
     git
     vim
+    just
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

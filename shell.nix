@@ -1,8 +1,9 @@
 #################### DevShell ####################
 #
 # Custom shell for bootstrapping on new hosts, modifying nix-config, and secrets management
-
-{ pkgs ? # If pkgs is not defined, instantiate nixpkgs from locked commit
+{
+  pkgs ?
+  # If pkgs is not defined, instantiate nixpkgs from locked commit
   let
     lock = (builtins.fromJSON (builtins.readFile ./flake.lock)).nodes.nixpkgs.locked;
     nixpkgs = fetchTarball {
@@ -10,22 +11,23 @@
       sha256 = lock.narHash;
     };
   in
-  import nixpkgs { overlays = [ ]; }
-, ...
+    import nixpkgs {overlays = [];},
+  ...
 }: {
   default = pkgs.mkShell {
     NIX_CONFIG = "extra-experimental-features = nix-command flakes repl-flake";
     nativeBuildInputs = builtins.attrValues {
-      inherit (pkgs)
+      inherit
+        (pkgs)
         nix
         home-manager
         git
         just
         pre-commit
-
         age
         ssh-to-age
-        sops;
+        sops
+        ;
     };
     shellHook = ''
       echo "Welcome to NixOs deployment shell"
@@ -34,15 +36,14 @@
   uhd = pkgs.mkShell {
     NIX_CONFIG = "extra-experimental-features = nix-command flakes repl-flake";
     packages = with pkgs; [
-        git
-        uhd
-        gnuradio
-        python311Packages.matplotlib
-        python311Packages.numpy
+      git
+      uhd
+      gnuradio
+      python311Packages.matplotlib
+      python311Packages.numpy
     ];
     shellHook = ''
       echo "Welcome to UHD devshell"
     '';
   };
 }
-

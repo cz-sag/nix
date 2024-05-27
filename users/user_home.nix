@@ -1,5 +1,4 @@
-{ pkgs, ...}:
-{
+{pkgs, ...}: {
   programs.bash = {
     enable = true;
     shellAliases = {
@@ -7,4 +6,4 @@
       la = "${pkgs.coreutils}/bin/ls -al";
     };
   };
- }
+}
