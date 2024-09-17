@@ -70,7 +70,6 @@
     usbutils
     pciutils
     git
-    vim
     just
   ];
 

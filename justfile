@@ -1,6 +1,9 @@
 switch:
   sudo nixos-rebuild --flake . switch
 
+test:
+  sudo nixos-rebuild --show-trace --flake . test
+
 format:
   sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko /tmp/nix/hosts/${HOSTNAME}/disko-config.nix
 
