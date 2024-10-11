@@ -12,10 +12,10 @@
         evince # document reader
         loupe
         snapshot # photo viewer
+        gedit # text editor
       ])
       ++ (with pkgs.gnome; [
         cheese # webcam tool
-        gedit # text editor
         epiphany # web browser
         #baobab # disk usage
         geary # email reader
