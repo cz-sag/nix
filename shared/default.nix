@@ -6,6 +6,6 @@
     ./helix.nix
     ./nvim.nix
     ./uhd.nix
-    #./sway.nix # done by home-manager
+    ./sway.nix # done by home-manager
   ];
 }
