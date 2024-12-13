@@ -6,6 +6,8 @@
     wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
     mako # notification system developed by swaywm maintainer
     foot
+    pavucontrol
+    nautilus
   ];
 
   # Enable the gnome-keyring secrets vault. 

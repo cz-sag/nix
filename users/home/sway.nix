@@ -105,6 +105,16 @@ in {
         }
       ];
     };
+    extraConfig = ''
+      for_window [window_role="pop-up"] floating enable
+      for_window [window_role="bubble"] floating enable
+      for_window [window_role="task_dialog"] floating enable
+      for_window [window_role="Preferences"] floating enable
+      for_window [window_type="dialog"] floating enable
+      for_window [window_type="menu"] floating enable
+      for_window [window_role="About"] floating enable
+      for_window [app_id="pavucontrol"] floating enable
+    '';
   };
   programs.swaylock = {
     enable = true;

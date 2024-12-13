@@ -6,16 +6,6 @@
 }: {
   nix.settings = {experimental-features = "nix-command flakes";};
 
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-  networking.useDHCP = lib.mkDefault true;
-
   # Set your time zone.
   time.timeZone = "Europe/Oslo";
 
@@ -35,22 +25,25 @@
   };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.excludePackages = [pkgs.xterm];
+  #services.xserver.enable = true;
+  #services.xserver.excludePackages = [pkgs.xterm];
 
   # Configure keymap in X11
-  services.xserver = {
-    xkb = {
-      layout = "no";
-      variant = "";
-    };
-  };
+  #services.xserver = {
+  #  xkb = {
+  #    layout = "no";
+  #    variant = "";
+  #  };
+  #};
 
   # Enable CUPS to print documents.
   services.printing.enable = false;
 
+  # enable userpace automout
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
+  
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -73,6 +66,7 @@
     pciutils
     git
     just
+    cifs-utils
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
