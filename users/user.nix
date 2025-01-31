@@ -18,7 +18,8 @@
       home.stateVersion = "23.11";
     };
   };
-  environment.systemPackages = [ 
-    pkgs.wireshark
-  ];
+  programs.wireshark = {
+    enable = true;
+    package = pkgs.wireshark;
+  };
 }

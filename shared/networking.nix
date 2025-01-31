@@ -12,6 +12,5 @@
 
   networking.extraHosts =
   ''
-    10.1.106.3 gitlab.udev.local
   '';
 }

@@ -23,8 +23,15 @@ in {
         }
       ];
       input = {
-        "*" = {
+#        "type:keyboard" = {
+#          xkb_layout="no";
+#        };
+        "1293:4160:Belkin" = {
           xkb_layout="no";
+        };
+        "3141:30354:SONiX_USB_Keyboard" = {
+          xkb_layout="us";
+          xkb_variant="altgr-intl";
         };
       };
       keybindings = {
@@ -82,7 +89,7 @@ in {
         "${mod}+v" = "splitv";
         "${mod}+w" = "layout tabbed";
 
-        "${mod}+Escape" = "exec ${pkgs.swaylock}/bin/swaylock";
+        "${mod}+Escape" = "exec ${swaylock}";
       };
       modes = {
         "resize" = {
