@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./config.nix
+    ./kernel.nix
     ./firefox.nix
     #./gnome.nix
     ./helix.nix
