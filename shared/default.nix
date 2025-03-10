@@ -10,5 +10,6 @@
     ./uhd.nix
     ./virt.nix
     ./sway.nix # done by home-manager
+    ./tor.nix
   ];
 }
