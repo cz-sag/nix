@@ -15,7 +15,7 @@
         userName = "user";
         userEmail = "user@nixos";
       };
-      home.stateVersion = "23.11";
+      home.stateVersion = "25.05";
     };
   };
   programs.wireshark = {

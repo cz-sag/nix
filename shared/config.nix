@@ -31,7 +31,7 @@
   # Configure keymap in X11
   #services.xserver = {
   #  xkb = {
-  #    layout = "no";
+  #    layout = "us";
   #    variant = "";
   #  };
   #};
@@ -95,5 +95,21 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  system.stateVersion = "23.11";
+  system.autoUpgrade = {
+    enable = true;
+    allowReboot = true;   # Allow automatic reboots when needed.
+    dates = "00:00";      # Build and symlink the new generation after 00:00.
+    randomizedDelaySec = "120min"; # Randomize trigger delay to between 0 and 120 minutes
+    flake = "github:cz-sag/nix";  # Build from a remote flake.
+    operation = "boot"; # Activate the new generation on next reboot.
+    persistent = true; # Store last trigger on disk, allows catching up on runs lost due to poweroff.
+
+    # Schedule reboots between 2 AM and 6 AM.
+    rebootWindow = {
+      lower = "02:00";
+      upper = "06:00";
+    };
+  };
+
+  system.stateVersion = "25.05";
 }
