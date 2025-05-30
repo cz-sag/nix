@@ -25,6 +25,6 @@
 
   environment.systemPackages = with pkgs; [
     ansible
-    (pkgs.python311.withPackages (ps: [ps.ansible ps.pip ps.proxmoxer ps.requests]))
+    (pkgs.python312.withPackages (ps: [ps.ansible ps.pip ps.proxmoxer ps.requests]))
   ];
 }

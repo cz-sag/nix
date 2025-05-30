@@ -24,7 +24,7 @@
     git
     uhd
     gnuradio
-    python311Packages.matplotlib
-    python311Packages.numpy
+    python313Packages.matplotlib
+    python313Packages.numpy
   ];
 }

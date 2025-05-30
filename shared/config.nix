@@ -44,7 +44,7 @@
   services.udisks2.enable = true;
   
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -67,6 +67,7 @@
     git
     just
     cifs-utils
+    toybox
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
