@@ -23,8 +23,8 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
-  environment.systemPackages = with pkgs; [
-    ansible
-    (pkgs.python312.withPackages (ps: [ps.ansible ps.pip ps.proxmoxer ps.requests]))
-  ];
+  #environment.systemPackages = with pkgs; [
+  #  ansible
+  #  (pkgs.python312.withPackages (ps: [ps.ansible ps.pip ps.proxmoxer ps.requests]))
+  #];
 }
