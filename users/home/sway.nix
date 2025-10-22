@@ -12,15 +12,15 @@ in {
       startup = [
         # Launch Firefox on start
         {command = "firefox";}
-        {
-          command = ''
-            ${pkgs.swayidle}/bin/swayidle -w \
-            timeout 300 '${swaylock}' \
-            timeout 600 'swaymsg output * dpms off' \
-                 resume 'swaymsg output * dpms on' \
-            before-sleep '${swaylock}'
-          '';
-        }
+        #{
+          #command = ''
+          #  ${pkgs.swayidle}/bin/swayidle -w \
+          #  timeout 300 '${swaylock}' \
+          #  timeout 600 'swaymsg output * dpms off' \
+          #       resume 'swaymsg output * dpms on' \
+          #  before-sleep '${swaylock}'
+          #'';
+        #}
       ];
       input = {
 #        "type:keyboard" = {

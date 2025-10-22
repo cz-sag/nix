@@ -67,7 +67,7 @@
     git
     just
     cifs-utils
-    toybox
+    coreutils-full
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
