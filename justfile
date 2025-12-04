@@ -1,3 +1,6 @@
+boot:
+  sudo nixos-rebuild --flake . boot
+  
 switch:
   sudo nixos-rebuild --flake . switch
 

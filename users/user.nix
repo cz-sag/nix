@@ -12,10 +12,12 @@
       imports = [./user_home.nix];
       programs.git = {
         enable = true;
-        userName = "user";
-        userEmail = "user@nixos";
+        settings.user = {
+          name = "user";
+          email = "user@nixos";
+        };
       };
-      home.stateVersion = "25.05";
+      home.stateVersion = "25.11";
     };
   };
   programs.wireshark = {
